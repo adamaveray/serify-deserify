@@ -90,7 +90,7 @@ export function isSerifiedValue<M extends SerifiableTypeMap>(
  *   isNullObject(Object.create(null)) === true;
  *   isNullObject({}) === false;
  */
-export function isNullObject(value: unknown): value is Record<string, never> {
+export function isNullObject(value: unknown): value is Record<string, unknown> {
   return (
     value !== null &&
     typeof value === 'object' &&
